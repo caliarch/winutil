@@ -811,6 +811,9 @@ try {
     # Install prerequisites
     # ============================================================================ #
 
+    # Change PSRepository installation policy to trusted
+    Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
+
     # VCLibs
     Install-Prerequisite -Name "VCLibs" -Version "14.00" -Url "https://store.rg-adguard.net/api/GetFiles" -AlternateUrl "https://aka.ms/Microsoft.VCLibs.$arch.14.00.Desktop.appx" -ContentType "application/x-www-form-urlencoded" -Body "type=PackageFamilyName&url=Microsoft.VCLibs.140.00_8wekyb3d8bbwe&ring=RP&lang=en-US"
 
